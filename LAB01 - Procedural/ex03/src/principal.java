@@ -98,7 +98,6 @@ public class principal {
         int[] vet = new int[5];
         int maior = 0, menor = 0, soma = 0;
         double media;
-        ;
 
         for (int i = 0; i < 5; i++) {
             System.out.printf("Entre com o número %d: \n", i + 1);
@@ -120,7 +119,7 @@ public class principal {
 
         System.out.printf("\nO maior valor é: %d\n", maior);
         System.out.printf("O menor valor é: %d\n", menor);
-        ;
+
         System.out.printf("A média é: %.2f\n", media);
     }
 
@@ -156,7 +155,7 @@ public class principal {
 
         System.out.printf("\nO maior valor é: %d, localizado na posição %d do vetor\n", maior, indiceMaior);
         System.out.printf("O menor valor é: %d, localizado na posição %d do vetor\n", menor, indiceMenor);
-        ;
+
         System.out.printf("A média é: %.2f\n", media);
     }
 
@@ -300,13 +299,13 @@ public class principal {
         System.out.println("<< Probabilidades >>");
 
         System.out.println("Digite a quantidade de bolinhas");
-        System.out.printf("Verde: ");
+        System.out.print("Verde: ");
         vet[0] = sc.nextInt();
-        System.out.printf("Azul: ");
+        System.out.print("Azul: ");
         vet[1] = sc.nextInt();
-        System.out.printf("Amarela: ");
+        System.out.print("Amarela: ");
         vet[2] = sc.nextInt();
-        System.out.printf("Vermelha: ");
+        System.out.print("Vermelha: ");
         vet[3] = sc.nextInt();
 
         //  Soma do total de bolinhas
@@ -372,10 +371,9 @@ public class principal {
         System.out.print("Quantos alunos serão cadastrados: ");
         n = sc.nextInt();
 
-        int vet[] = new int[n];
-        int numero[] = new int[n];
-        String classe[] = new String[n];
-        float cra[] = new float[n];
+        int[] numero = new int[n];
+        String[] classe = new String[n];
+        float[] cra = new float[n];
 
         for(int i = 0; i < n; i++){
             System.out.print("Entre com o número do aluno: ");
