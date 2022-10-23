@@ -1,3 +1,4 @@
+import javax.sound.midi.SysexMessage;
 import java.util.Scanner;
 
 import static java.lang.Math.pow;
@@ -245,8 +246,232 @@ public class principal {
 
     public static void ex10(){
         Scanner sc = new Scanner(System.in);
-        int[] vetA, vetB, vetC = new int[3];
+        int[] vetA = new int[3], vetB = new int[3], vetC = new int[3];
 
+        System.out.println("<< Subtração de vetores >>");
+
+        for(int i = 0; i < 3; i++){
+            System.out.printf("Digite o valor %d de A: ", i+1);
+            vetA[i] = sc.nextInt();
+        }
+
+        for(int i = 0; i < 3; i++){
+            System.out.printf("Digite o valor %d de B: ", i+1);
+            vetB[i] = sc.nextInt();
+        }
+
+        for(int i = 0; i < 3; i++){
+            vetC[i] = vetA[i] - vetB[i];
+        }
+
+        System.out.printf("O vetor C, definido como C = A-B é (%d, %d, %d)", vetC[0], vetC[1], vetC[2]);
+    }
+
+    public static void ex11(){
+        Scanner sc = new Scanner(System.in);
+        int[] v = new int[5], v1 = new int[5], v2 = new int[5];
+
+        System.out.println("<< Pares e Ímpares >>");
+        for(int i = 0; i < 5; i++){
+            System.out.printf("Digite o valor %d: ", i+1);
+            v[i] = sc.nextInt();
+
+            if(v[i] % 2 == 0) v2[i] = v[i];
+            else v1[i] = v[i];
+        }
+
+        System.out.print("Ímpares: ");
+        for(int i = 0; i < 5; i++){
+            if(v1[i] != 0) System.out.printf("%d ", v1[i]);
+        }
+
+        System.out.print("\nPares: ");
+        for(int i = 0; i < 5; i++){
+            if(v2[i] != 0) System.out.printf("%d ", v2[i]);
+        }
+    }
+
+    public static void ex12(){
+        Scanner sc = new Scanner(System.in);
+        int[] vet = new int[4];
+        float[] prob = new float[4];
+        float soma = 0 , maior = 0;
+
+        System.out.println("<< Probabilidades >>");
+
+        System.out.println("Digite a quantidade de bolinhas");
+        System.out.printf("Verde: ");
+        vet[0] = sc.nextInt();
+        System.out.printf("Azul: ");
+        vet[1] = sc.nextInt();
+        System.out.printf("Amarela: ");
+        vet[2] = sc.nextInt();
+        System.out.printf("Vermelha: ");
+        vet[3] = sc.nextInt();
+
+        //  Soma do total de bolinhas
+        for(int i = 0; i < 4; i++){
+            soma += vet[i];
+        }
+
+        //  Verde = 0
+        prob[0] = (vet[0] / soma) * 100;
+        //  Azul = 1
+        prob[1] = (vet[1] / soma) * 100;
+        // Amarela = 2
+        prob[2] = (vet[2] / soma) * 100;
+        // Vermelha = 3
+        prob[3] = (vet[3] / soma) * 100;
+
+        //  Detectar a maior probabilidade
+        for(int i = 0; i < 4; i++){
+            if(prob[i] >= maior) maior = prob[i];
+        }
+
+        //  Verde = 0
+        if(prob[0] >= maior) System.out.printf("Verde: %.1f%% <<< Maior probabilidade\n", maior);
+        else System.out.printf("Verde: %.1f%%\n", prob[0]);
+
+        //  Azul = 1
+        if(prob[1] >= maior) System.out.printf("Azul: %.1f%% <<< Maior probabilidade\n", maior);
+        else System.out.printf("Azul: %.1f%%\n", prob[1]);
+
+        // Amarela = 2
+        if(prob[2] >= maior) System.out.printf("Amarela: %.1f%% <<< Maior probabilidade\n", maior);
+        else System.out.printf("Amarela: %.1f%%\n", prob[2]);
+
+        //  Vermelha = 3
+        if(prob[3] >= maior) System.out.printf("Vermelha: %.1f%% <<< Maior probabilidade\n", maior);
+        else System.out.printf("Vermelha: %.1f%%\n", prob[3]);
+    }
+
+    public static void ex13(){
+        Scanner sc = new Scanner(System.in);
+        int[] vet = new int[5];
+
+        System.out.println("<< Zerando negativos >>");
+
+        for(int i = 0; i < 5; i++){
+            System.out.printf("Entre com o número %d: ", i+1);
+            vet[i] = sc.nextInt();
+
+            if(vet[i] < 0) vet[i] = 0;
+        }
+
+        System.out.print("Zerando os negativos, obtém-se: ");
+        for(int i = 0; i < 5; i++){
+            System.out.printf("%d ", vet[i]);
+        }
+    }
+
+    public static void ex14(){
+        Scanner sc = new Scanner(System.in);
+        int n;
+
+        System.out.println("<< Universidade X >>");
+        System.out.print("Quantos alunos serão cadastrados: ");
+        n = sc.nextInt();
+
+        int vet[] = new int[n];
+        int numero[] = new int[n];
+        String classe[] = new String[n];
+        float cra[] = new float[n];
+
+        for(int i = 0; i < n; i++){
+            System.out.print("Entre com o número do aluno: ");
+            numero[i] = sc.nextInt();
+            System.out.printf("Entre com a classe social do aluno %d: ", numero[i]);
+            classe[i] = sc.nextLine();
+            sc.nextLine();
+            System.out.printf("Entre com o CRA do aluno %d: ", numero[i]);
+            cra[i] = sc.nextInt();
+        }
+
+        System.out.println("==== Alunos Cadastrados ====");
+        for(int i = 0; i < n; i++){
+            System.out.printf("Número %d - Classe social %s - CRA: %.2f\n", numero[i], classe[i], cra[i]);
+        }
+    }
+
+    public static void ex15(){
+        Scanner sc = new Scanner(System.in);
+        int[] vet = new int[8], rep = new int[8];
+        int count = 0;
+        boolean verifica = false;
+
+        System.out.println("<< Valores iguais >>");
+        for(int i = 0; i < 8; i++) {
+            System.out.printf("Entre com o número %d: ", i + 1);
+            vet[i] = sc.nextInt();
+        }
+
+        for(int i = 0; i < 8; i++){
+            for(int j = i+1; j < 8; j++){
+                //  Encontrou um repetido
+                if(vet[i] == vet[j]) verifica = true;
+            }
+            //  Fazendo atribuições para os repetidos
+            if(verifica) {
+                for (int r = 0; r < 8; r++) {
+                    if (rep[r] == vet[i]) verifica = false; // Número já adicionado
+                }
+            }
+
+            if(verifica) {
+                rep[count] = vet[i];
+                count++;
+            }
+
+            verifica = false;
+        }
+
+        System.out.print("Valores repetidos: ");
+        for(int i = 0; i < count; i++){
+            System.out.printf("%d, ", rep[i]);
+        }
+    }
+
+    public static void ex16(){
+        Scanner sc = new Scanner(System.in);
+        int[] vet = new int[8], rep = new int[8], valRep = new int[8];
+        int count = 0, count2 = 1;
+        boolean verifica = false;
+
+        System.out.println("<< Valores iguais >>");
+        for(int i = 0; i < 8; i++) {
+            System.out.printf("Entre com o número %d: ", i + 1);
+            vet[i] = sc.nextInt();
+        }
+
+        for(int i = 0; i < 8; i++){
+            for(int j = i+1; j < 8; j++){
+                //  Encontrou um repetido
+                if(vet[i] == vet[j]) {
+                    count2++;
+                    verifica = true;
+                }
+            }
+            //  Fazendo atribuições para os repetidos
+            if(verifica) {
+                for (int r = 0; r < 8; r++) {
+                    if (rep[r] == vet[i]) verifica = false; // Número já adicionado
+                }
+            }
+
+            if(verifica) {
+                rep[count] = vet[i];
+                valRep[count] = count2;
+                count++;
+            }
+
+            verifica = false;
+            count2 = 1;
+        }
+
+        System.out.print("Valores repetidos: ");
+        for(int i = 0; i < count; i++){
+            System.out.printf("%d aparece %d vezes\n", rep[i], valRep[i]);
+        }
     }
 
     public static void main(String[] args) {
@@ -259,7 +484,13 @@ public class principal {
         // ex07();
         // ex08();
         // ex09();
-        ex10();
+        // ex10();
+        // ex11();
+        // ex12();
+        // ex13();
+        // ex14();
+        // ex15();
+        // ex16();
     }
 
 
