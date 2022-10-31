@@ -1,12 +1,12 @@
 public class Selecao {
     private String name;
     private String tecnico;
-    private Figurinhas jogadores = new Figurinhas();
+    private Figurinhas[] jogador = new Figurinhas[11];
 
-    public Selecao(String name, String tecnico, Figurinhas jogadores) {
-        this.name = name;
-        this.tecnico = tecnico;
-        this.jogadores = jogadores;
+    public Selecao() {
+        for(int i = 0; i < 11; i++){
+            jogador[i] = new Figurinhas();
+        }
     }
 
     public String getName() {
@@ -25,12 +25,12 @@ public class Selecao {
         this.tecnico = tecnico;
     }
 
-    public Figurinhas getJogadores() {
-        return jogadores;
+    public Figurinhas[] getJogador() {
+        return jogador;
     }
 
-    public void setJogadores(Figurinhas jogadores) {
-        this.jogadores = jogadores;
+    public void setJogador(Figurinhas[] jogadores) {
+        this.jogador = jogadores;
     }
 }
 
