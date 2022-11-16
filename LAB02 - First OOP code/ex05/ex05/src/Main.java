@@ -4,51 +4,29 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        Figurinhas[] jogadorSel1 = new Figurinhas[11];
-        Figurinhas[] jogadorSel2 = new Figurinhas[11];
+        Figurinhas[] jogadoresSel1;
+        Figurinhas[] jogadoresSel2;
+
+        //  No construtor é feito a instanciação de um vetor de Figurinhas de tamanho 11.
+        //  No construtor também é feito a leitura e armazenamento dos jogadores respectivos a cada seleção.
+        System.out.println("========== Jogadores da seleção 1 ====================");
         Selecao selecao1 = new Selecao("Brasil", "Luxemburgo");
+
+        //  Caso seja necessário tratar dados dos jogadores da seleção
+        //  temos que declarar um vetor de jogadores e esse vetor receber o getter de jogadores
+        //  da seleção desejada, como no exemplo abaixo.
+        //  Um exemplo é utilizar o for para acessar informações contidas em jogadoresSel1[i].
+        jogadoresSel1 = selecao1.getJogador();
+
+        //  No construtor é feito a instanciação de um vetor de Figurinhas de tamanho 11.
+        //  No construtor também é feito a leitura e armazenamento dos jogadores respectivos a cada seleção.
+        System.out.println("========== Jogadores da seleção 2 ====================");
         Selecao selecao2 = new Selecao("Mexico", "Pelé");
 
-        for(int i = 0; i < 11; i++){
-            jogadorSel1[i] = new Figurinhas("Brasil");
-            jogadorSel2[i] = new Figurinhas("Mexico");
-        }
-
-        //  Instanciação jogadores seleção 1
-        System.out.println("========== Jogadores da seleção 1 ====================");
-        for(int i = 0; i < 11; i++){
-            System.out.printf("Digite o nome do jogador %d: ", i+1);
-            jogadorSel1[i].setName(sc.nextLine());
-            System.out.printf("Digite a data de nascimento (ano-mes-dia) do jogador %d: ", i+1);
-            jogadorSel1[i].setBirthday(Date.valueOf(sc.nextLine()));
-            System.out.printf("Digite a altura do jogador %d: ", i+1);
-            jogadorSel1[i].setHeight(sc.nextFloat());
-            System.out.printf("Digite o peso do jogador %d: ", i+1);
-            jogadorSel1[i].setWeight(sc.nextFloat());
-            sc.nextLine();
-            System.out.printf("Digite a posição do jogador %d: ", i+1);
-            jogadorSel1[i].setPosition(sc.nextLine());
-            System.out.println();
-        }
-        selecao1.setJogador(jogadorSel1);
-
-        //  Instanciação jogadores seleção 2
-        System.out.println("========== Jogadores da seleção 2 ====================");
-        for(int i = 0; i < 11; i++){
-            System.out.printf("Digite o nome do jogador %d: ", i+1);
-            jogadorSel2[i].setName(sc.nextLine());
-            System.out.printf("Digite a data de nascimento (ano-mes-dia) do jogador %d: ", i+1);
-            jogadorSel2[i].setBirthday(Date.valueOf(sc.nextLine()));
-            System.out.printf("Digite a altura do jogador %d: ", i+1);
-            jogadorSel2[i].setHeight(sc.nextFloat());
-            System.out.printf("Digite o peso do jogador %d: ", i+1);
-            jogadorSel2[i].setWeight(sc.nextFloat());
-            sc.nextLine();
-            System.out.printf("Digite a posição do jogador %d: ", i+1);
-            jogadorSel2[i].setPosition(sc.nextLine());
-            System.out.printf("Digite o pais do jogador %d: ", i+1);
-            System.out.println();
-        }
-        selecao2.setJogador(jogadorSel2);
+        //  Caso seja necessário tratar dados dos jogadores da seleção
+        //  temos que declarar um vetor de jogadores e esse vetor receber o getter de jogadores
+        //  da seleção desejada, como no exemplo abaixo.
+        //  Um exemplo é utilizar o for para acessar informações contidas em jogadoresSel2[i].
+        jogadoresSel2 = selecao2.getJogador();
     }
 }
