@@ -28,7 +28,7 @@ Faça um programa principal que cria uma Figurinha e uma FigurinhaExtra, e mostr
 
 Faça um programa principal que cria uma Figurinha e uma FigurinhaExtra, e mostre os dados das figurinhas criadas
 
-# Ex03
+# Ex04
 Teste de chamada de herança
  Faça um programa que contenha três classes: C1; C2; C3
 
@@ -43,7 +43,7 @@ Teste de chamada de herança
     - Lembre que as classes herdam os atributos, inclusive os privados - e esses também devem ser mostrados 
 - Em todas as classes, inclua um método que chama mostar_atributos_super, que mostra os valores de *todos* os atributos de um objeto e que utilize super
 
-# Ex04
+# Ex05
 Uma empresa tem quatro tipos de funcionários: chefes, vendedores, operários e horistas. Cada um desses funcionários ganha seus salários conforme regras distintas, apresentadas a seguir: 
 
 Chefe: salário fixo e predefinido;
@@ -54,7 +54,7 @@ Horista: valor por hora X total de horas trabalhadas.
 
 Crie as classes correspondentes, adicionando atributos e métodos que achar necessários. A classe *Funcionario* deve incluir os campos privados *nome*, *dataNascimento* e *salario*. Além disso, crie uma classe *Empresa*, que conterá o método *main()*. A empresa tem vários funcionários, logo crie um vetor (array) para cada tipo de funcionário*. 
 
-# Ex05
+# Ex06
 Crie uma classe chamada {Ingresso}, que possui um valor e um método {escreveValor()}. Em seguida:
 
 Crie uma classe {VIP}, que herda {Ingresso} e possui um valor adicional. Crie um método que retorne o valor do ingresso VIP (com o adicional incluído).
