@@ -41,15 +41,20 @@ public class C2 extends C1{
     }
 
     public void mostrar_atributos(){
-        System.out.printf("Etiqueta: \n", getEtiqueta());
-        System.out.printf("Preço: \n", getPreco());
-        System.out.printf("Data de validade: \n", getDataValidade());
+        System.out.printf("Nome do presidente: %s\n", getPresidente());
+        System.out.printf("Qtd de votos: %d\n", getQuantidadeVotos());
+        System.out.printf("País: %s\n", getPais());
+        System.out.println("=================================");
+        System.out.printf("Etiqueta: %s\n", getEtiqueta());
+        System.out.printf("Preço: %f\n", getPreco());
+        System.out.printf("Data de validade: %s\n", getDataValidade());
     }
 
     public void mostrar_atributos_super(){
         super.mostrar_atributos();
-        System.out.printf("Etiqueta: \n", getEtiqueta());
-        System.out.printf("Preço: \n", getPreco());
-        System.out.printf("Data de validade: \n", getDataValidade());
+        System.out.println("=================================");
+        System.out.printf("Etiqueta: %s\n", getEtiqueta());
+        System.out.printf("Preço: %f\n", getPreco());
+        System.out.printf("Data de validade: %s\n", getDataValidade());
     }
 }

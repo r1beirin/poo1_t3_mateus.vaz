@@ -41,8 +41,8 @@ public class C1 {
     }
 
     public void mostrar_atributos(){
-        System.out.printf("Nome do presidente: \n", getPresidente());
-        System.out.printf("Qtd de votos: \n", getQuantidadeVotos());
-        System.out.printf("País: \n", getPais());
+        System.out.printf("Nome do presidente: %s\n", getPresidente());
+        System.out.printf("Qtd de votos: %d\n", getQuantidadeVotos());
+        System.out.printf("País: %s\n", getPais());
     }
 }
