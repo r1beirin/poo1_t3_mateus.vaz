@@ -1,6 +1,9 @@
-public class Operario extends Funcionario{
-    public Operario(){
+import java.time.LocalDate;
 
+public class Operario extends Funcionario{
+    public Operario(String nome, LocalDate dataNascimento, double valorProducao, int qtdProduzida){
+        super(nome, dataNascimento, 0);
+        super.setSalario(valorProducao * qtdProduzida);
     }
 
     @Override

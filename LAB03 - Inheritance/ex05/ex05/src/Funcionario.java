@@ -5,7 +5,10 @@ public class Funcionario {
     private LocalDate dataNascimento;
     private double salario;
 
-    public Funcionario(){
+    public Funcionario(String nome, LocalDate dataNascimento, double salario){
+        this.nome = nome;
+        this.dataNascimento = dataNascimento;
+        this.salario = salario;
     }
 
     public String getNome() {

@@ -1,5 +1,8 @@
+import java.time.LocalDate;
+
 public class Chefe extends Funcionario {
-    public Chefe(){
+    public Chefe(String nome, LocalDate dataNascimento, double salarioFixo){
+        super(nome, dataNascimento, salarioFixo);
     }
 
     @Override
