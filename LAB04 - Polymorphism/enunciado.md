@@ -23,5 +23,5 @@ Copie o exemplo Estudante disponível na pasta 'samples/polimorfismo'. Crie uma 
 
 (b) Mostre as informações do nome de todos os alunos e, no caso de aluno de doutorado, mostrar adicionalmente o título da tese a linha de pesquisa
 
-(b) Crie um novo vetor e copie para ele todos os alunos de pós-graduação (somente a cópia da referência do objeto - não há necessidade de duplicar o objeto na memóra). Percorra o vetor e mostre as informações completas dos alunos.
+(c) Crie um novo vetor e copie para ele todos os alunos de pós-graduação (somente a cópia da referência do objeto - não há necessidade de duplicar o objeto na memóra). Percorra o vetor e mostre as informações completas dos alunos.
 
